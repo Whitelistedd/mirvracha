@@ -53,7 +53,7 @@ const CenterImageWrap = styled.div`
   border-radius: 50%;
 `
 
-const Center = styled.div`
+const Center = styled.li`
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -91,9 +91,27 @@ const IconsList = styled.ul`
     ${CenterImageWrap} {
       width: 150px;
     }
+    ${Center} {
+      bottom: 15px;
+    }
     height: 400px;
     width: 400px;
     font-size: 8px;
+  }
+
+  @media only screen and (max-width: ${devices.xs}) {
+    ${CenterImageWrap} {
+      width: 80px;
+    }
+    ${Center} {
+      bottom: 25px;
+    }
+    ${ImageTitle} {
+      bottom: 10px;
+    }
+    height: 250px;
+    width: 250px;
+    font-size: 4px;
   }
 `
 

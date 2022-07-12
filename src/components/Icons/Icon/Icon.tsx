@@ -180,6 +180,28 @@ const Container = styled.li<{ index: number; listNumber: number }>`
       font-size: 13px;
     }
   }
+
+  @media only screen and (max-width: ${devices.xs}) {
+    transform-origin: 125px;
+    ${ImageWrap} {
+      width: 50px;
+    }
+    ${Badge} {
+      width: 40px;
+      right: 25px;
+      bottom: 80px;
+    }
+    ${Description} {
+      font-size: 0.6em;
+      width: 115px;
+      line-height: 10px;
+      --left: 60px;
+      --right: 45px;
+      --top: 8px;
+      --bottom: 55px;
+      --side-bottom: 10px;
+    }
+  }
 `
 
 export default Icon
