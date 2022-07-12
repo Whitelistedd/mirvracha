@@ -12,12 +12,14 @@ const DescriptionItem: React.FC<DescriptionItemProps> = ({ description }) => {
 const Description = styled.p``
 
 const Container = styled.li`
-  border: 2px solid #068ca6;
   padding: 1em;
   background: white;
   color: #223867;
-  border-radius: 10px;
   font-size: 1.3em;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid #068ca6;
+  box-shadow: 0px 4px 4px rgba(6, 140, 166, 0.31);
+  border-radius: 10px;
 `
 
 export default DescriptionItem

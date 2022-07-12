@@ -7,14 +7,18 @@ import { IconsProps } from './Icons.model'
 const Icons: React.FC<IconsProps> = ({ IconsData, CenterImage }) => {
   return (
     <IconsList>
-      <CenterImageWrap>
-        <StyledImage
-          layout="responsive"
-          width={315}
-          height={315}
-          src={CenterImage}
-        />
-      </CenterImageWrap>
+      <Center>
+        <CenterImageWrap>
+          <StyledImage
+            layout="responsive"
+            width={315}
+            height={315}
+            src={CenterImage}
+          />
+        </CenterImageWrap>
+
+        <ImageTitle>Взрослый</ImageTitle>
+      </Center>
       {IconsData.map((icon, index) => (
         <Icon
           positionNumber={icon.positionNumber}
@@ -29,13 +33,31 @@ const Icons: React.FC<IconsProps> = ({ IconsData, CenterImage }) => {
   )
 }
 
+const ImageTitle = styled.p`
+  font-size: 2em;
+  bottom: 30px;
+  position: absolute;
+  color: #068ca6;
+  font-weight: 700;
+`
+
 const StyledImage = styled(Image)`
   object-fit: cover;
+  opacity: 0.4;
   border-radius: 50%;
 `
 
 const CenterImageWrap = styled.div`
   width: 315px;
+  background-color: white;
+  border-radius: 50%;
+`
+
+const Center = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
 `
 
 const IconsList = styled.ul`
@@ -53,6 +75,7 @@ const IconsList = styled.ul`
     }
     height: 550px;
     width: 550px;
+    font-size: 12px;
   }
 
   @media only screen and (max-width: ${devices.md}) {
@@ -61,6 +84,7 @@ const IconsList = styled.ul`
     }
     height: 470px;
     width: 470px;
+    font-size: 10px;
   }
 
   @media only screen and (max-width: ${devices.sm}) {
@@ -69,6 +93,7 @@ const IconsList = styled.ul`
     }
     height: 400px;
     width: 400px;
+    font-size: 8px;
   }
 `
 

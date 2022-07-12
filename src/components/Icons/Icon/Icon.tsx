@@ -80,6 +80,7 @@ const Badge = styled.div`
   bottom: 50px;
   right: 50px;
   width: 95px;
+  filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
 `
 
 const HealthImage = styled(Image)<{ index: number }>``
